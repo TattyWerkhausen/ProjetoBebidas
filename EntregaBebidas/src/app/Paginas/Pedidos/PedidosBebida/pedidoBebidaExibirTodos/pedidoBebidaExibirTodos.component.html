@@ -1,0 +1,28 @@
+<div>
+  <button (click)="exibirTodosPedidosBebidas()">Exibir Todos</button>
+  <div *ngFor="let pedidoBebida of pedidoBebidaTodos">
+    <table class="table table-light">
+      <tbody>
+        <tr>
+          <th>Id:</th>
+          <th>Id Bebida:</th>
+          <th>Id Pedido:</th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>{{ pedidoBebida.id }}</td>
+          <td>{{ pedidoBebida.idBebida }}</td>
+          <td>{{ pedidoBebida.idPedido }}</td>
+          <!-- <td><a [routerLink]='"/editarCliente/" + cliente.id'>Editar</a></td> -->
+          <!-- <td><a [routerLink]='"/excluirCliente/" + cliente.id'>Excluir</a></td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <a routerLink="/layout/" target="_blank"
+      ><button class="btn btn-success">Inicio</button>
+    </a>
+  </div>
+</div>

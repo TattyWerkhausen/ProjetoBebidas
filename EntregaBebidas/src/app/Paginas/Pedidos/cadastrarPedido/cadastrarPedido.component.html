@@ -1,0 +1,64 @@
+<div>
+  <h2>Cadastro Pedido</h2>
+  <h4>Pedido para:</h4>
+  <form [formGroup]="formulario" class="table table-bordered">
+    <h4>
+      Bebidas do pedido
+      <div class="btn btn-primary" (click)="addSubformulario()">+</div>
+    </h4>
+    <table>
+      <tr>
+        <th>id</th>
+        <th>bebida</th>
+      </tr>
+      <ng-container *ngFor="let subformulario of subformulariosPedidoBebida">
+        <tr>
+          <td>{{ subformulario.id }}</td>
+          <td>
+            <form [formGroup]="subformulario.form">
+              <select formControlName="idBebida">
+                <ng-container *ngFor="let bebida of bebidas">
+                  <option [value]="bebida.id">
+                    {{ bebida.nome }} {{ bebida.valorVenda | currency: "BRL" }}
+                  </option>
+                </ng-container>
+              </select>
+            </form>
+          </td>
+        </tr>
+      </ng-container>
+    </table>
+  </form>
+</div>
+
+<!-- Exibir pedido
+     <div *ngFor="let pedidos of pedidos">
+    <h3>Cadastro de Pedido</h3>
+     <p>Cadastro de pedido para {{cliente.nome}}</p>
+    <form formGroup="formGroup">
+    <table class="table">
+      <tr>
+        <th>Rua</th>
+        <td>hhh</td>
+      </tr>
+
+      <tr></tr>
+      <tr>
+        <th>Bairro</th>
+        <td>.</td>
+      </tr>
+      <tr>
+        <th>Bebidas</th>
+        <td>,</td>
+      </tr>
+      <tr>
+        <th>Valor</th>
+        <td>R$:</td>
+      </tr>
+    </table>
+  </form>
+    <p>Status de pedido - {{pedido.emProducao}}</p>
+    <button class="btn btn-primary">Saiu para Entrega</button>
+    <button class="btn btn-success">Recebido</button>
+  </div>
+  -->

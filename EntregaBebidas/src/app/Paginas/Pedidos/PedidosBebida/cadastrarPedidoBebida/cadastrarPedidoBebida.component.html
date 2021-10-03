@@ -1,0 +1,26 @@
+<div>
+  <div>
+    <h3>Cadastrar Pedido Bebida</h3>
+    <form [formGroup]="formulario">
+      <table>
+        <tr>
+          <th>Id Bebida:</th>
+          <input type="text" formControlName="idBebida" placeholder="" />
+        </tr>
+        <tr>
+          <th>Id Pedido:</th>
+          <input type="text" formControlName="idPedido" placeholder="" />
+        </tr>
+      </table>
+    </form>
+    <button (click)="cadastrarPedidoBebida()">Registrar</button>
+  </div>
+  <div>
+    <a routerLink="/cadastrarBebida/" target="_blank">Cadastrar Bebida</a>
+  </div>
+
+  <a href="/exibirTodosClientes/" target="_blank">Exibir Todos </a>
+  <div>
+    <a routerLink="/cadastrarCliente/" target="_blank">Inicio </a>
+  </div>
+</div>

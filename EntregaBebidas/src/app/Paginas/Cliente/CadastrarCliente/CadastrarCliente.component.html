@@ -1,0 +1,29 @@
+<div>
+  <div>
+    <h3>Cadastrar Cliente</h3>
+    <form [formGroup]="formGroup">
+      <table>
+        <tr>
+          <th>Nome:</th>
+          <input type="text" formControlName="nome" placeholder="" />
+        </tr>
+        <tr>
+          <th>Rua:</th>
+          <input type="text" formControlName="rua" placeholder="" />
+        </tr>
+        <tr>
+          <th>Bairro:</th>
+          <input type="text" formControlName="bairro" placeholder="" />
+        </tr>
+      </table>
+    </form>
+    <button (click)="cadastrarCliente()">Registrar</button>
+  </div>
+  <div>
+    <a routerLink="/cadastrarBebida/" target="_blank">Cadastrar Bebida</a>
+  </div>
+  <a href="/exibirTodosClientes/" target="_blank">Exibir Todos </a>
+  <div>
+    <a routerLink="/cadastrarCliente/" target="_blank">Inicio </a>
+  </div>
+</div>
